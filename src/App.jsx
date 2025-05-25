@@ -1,7 +1,17 @@
+import Header from "./components/Header";
+import DropdownSelector from "./components/DropdownSelector";
+import ScatterPlot from "./components/ScatterPlot";
+
 function App() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Header />
+      <main>
+        <div className="section">
+          <DropdownSelector />
+          <ScatterPlot />
+        </div>
+      </main>
     </div>
   );
 }

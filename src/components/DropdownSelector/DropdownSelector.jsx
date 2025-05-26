@@ -6,7 +6,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
           <label className="label">X Axis</label>
           <div className="control">
             <div className="select">
-              <select defaultValue="sepal length">
+              <select defaultValue={xAxis} onChange={(e) => setXAxis(e.target.value)}>
                 <option>sepal length</option>
                 <option>sepal width</option>
                 <option>petal length</option>
@@ -22,7 +22,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
           <label className="label">Y Axis</label>
           <div className="control">
             <div className="select">
-              <select defaultValue="sepal width">
+              <select defaultValue={yAxis} onChange={(e) => setYAxis(e.target.value)}>
                 <option>sepal length</option>
                 <option>sepal width</option>
                 <option>petal length</option>

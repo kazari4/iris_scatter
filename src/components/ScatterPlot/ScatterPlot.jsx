@@ -1,6 +1,9 @@
-function ScatterPlot() {
+function ScatterPlot(data) {
+  const width = 800;
+  const height = 800;
   return (
-    <svg width="800" height="800"></svg>
+    <svg width={width} height={height}>
+    </svg>
   )
 }
 

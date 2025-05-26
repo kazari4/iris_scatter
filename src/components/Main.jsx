@@ -20,7 +20,7 @@ function Main() {
   return (
     <section className="section">
       <DropdownSelector />
-      <ScatterPlot />
+      <ScatterPlot data={irisData} />
     </section>
   );
 }

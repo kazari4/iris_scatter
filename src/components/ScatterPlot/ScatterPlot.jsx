@@ -1,4 +1,4 @@
-function ScatterPlot(data) {
+function ScatterPlot({ data, xAxis, yAxis }) {
   const width = 800;
   const height = 800;
   return (

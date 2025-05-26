@@ -6,6 +6,9 @@ import Loading from "./Loading/Loading";
 
 function Main() {
   const [irisData, setIrisData] = useState(null);
+  const [xAxis, setXAxis] = useState("sepal length");
+  const [yAxis, setYAxis] = useState("sepal width");
+
   useEffect(() => {
     fetchIrisDataSet().then((irisData) => {
       setIrisData(irisData);
@@ -19,8 +22,17 @@ function Main() {
   }
   return (
     <section className="section">
-      <DropdownSelector />
-      <ScatterPlot data={irisData} />
+      <DropdownSelector
+        xAxis={xAxis}
+        yAxis={yAxis}
+        setXAxis={setXAxis}
+        setYAxis={setYAxis}
+      />
+      <ScatterPlot
+        data={irisData}
+        xAxis={xAxis}
+        yAxis={yAxis}
+      />
     </section>
   );
 }

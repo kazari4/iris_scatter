@@ -1,4 +1,4 @@
-function DropdownSelector() {
+function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
   return (
     <div className="columns">
       <div className="column">

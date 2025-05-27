@@ -1,4 +1,6 @@
 export function convertData(data, xLabel, yLabel) {
+  if (!data) return;
+
   const axisKeyConvert = {
     "sepal length": "sepalLength",
     "sepal width": "sepalWidth",

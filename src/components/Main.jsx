@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { fetchIrisDataSet } from "../api";
+import { convertData } from "./convertData";
 import DropdownSelector from "./DropdownSelector/DropdownSelector";
 import ScatterPlot from "./ScatterPlot/ScatterPlot";
 import Loading from "./Loading/Loading";
-import { convertData } from "./convertData";
+
 
 function Main() {
   const [irisData, setIrisData] = useState(null);

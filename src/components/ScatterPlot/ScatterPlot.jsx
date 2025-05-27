@@ -1,3 +1,6 @@
+import { getAxisKey } from "./getAxisKey"
+import { createScale } from "./createScale"
+
 function ScatterPlot({ data, xAxis, yAxis }) {
   const width = 800;
   const height = 800;
@@ -5,13 +8,11 @@ function ScatterPlot({ data, xAxis, yAxis }) {
   const xKey = getAxisKey(xAxis);
   const yKey = getAxisKey(yAxis);
 
-  const xMin = Math.round(Math.min(...data.map(d => d[xKey])));
-  const xMax = Math.round(Math.max(...data.map(d => d[xKey])));
-  const yMin = Math.round(Math.min(...data.map(d => d[yKey])));
-  const yMax = Math.round(Math.max(...data.map(d => d[yKey])));
+  const xRange = [0, 500]
+  const yRange = [500, 0]
 
-  const xScale = d3.scaleLinear().domain([xMin, xMax]).range([0, 500])
-  const yScale = d3.scaleLinear().domain([yMin, yMax]).range([0, 500])
+  const xScale = createScale(data, xKey, xRange)
+  const yScale = createScale(data, yKey, yRange)
 
 
   return (

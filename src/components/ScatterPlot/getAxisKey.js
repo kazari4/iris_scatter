@@ -6,5 +6,5 @@ const axisKeyConvert = {
 };
 
 export function getAxisKey(label) {
-  return axisKeyMap[label];
+  return axisKeyConvert[label];
 }

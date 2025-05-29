@@ -12,8 +12,7 @@ function ScatterPlot({ data }) {
   const xScale = createScale(data, " x", xRange)
   const yScale = createScale(data, "y", yRange)
 
-  const color = getColor(data)
-
+  const color = getColor(data = { data })
 
   return (
     <svg width={width} height={height}>

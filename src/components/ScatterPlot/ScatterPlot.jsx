@@ -17,7 +17,7 @@ function ScatterPlot({ data }) {
 
   return (
     <svg width={width} height={height}>
-      <PlotPoints data={data} xScale={xScale} yScale={yScale} width={width} height={height} />
+      <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} width={width} height={height} />
     </svg>
   )
 }

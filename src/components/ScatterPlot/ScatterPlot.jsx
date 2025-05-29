@@ -1,4 +1,5 @@
-import { createScale } from "./createScale"
+import { createScale } from "./createScale";
+import { PlotPoints } from "./PlotPoints";
 
 function ScatterPlot({ data }) {
   const width = 800;
@@ -13,6 +14,7 @@ function ScatterPlot({ data }) {
 
   return (
     <svg width={width} height={height}>
+      <PlotPoints data={data} xScale={xScale} yScale={yScale} width={width} height={height} />
     </svg>
   )
 }

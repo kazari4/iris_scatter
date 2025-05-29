@@ -1,5 +1,6 @@
 import { createScale } from "./createScale";
-import { PlotPoints } from "./PlotPoints";
+import { getColor } from "./getColor";
+import PlotPoints from "./PlotPoints";
 
 function ScatterPlot({ data }) {
   const width = 800;
@@ -10,6 +11,8 @@ function ScatterPlot({ data }) {
 
   const xScale = createScale(data, " x", xRange)
   const yScale = createScale(data, "y", yRange)
+
+  const color = getColor(data)
 
 
   return (

@@ -1,4 +1,4 @@
-function PlotPoints({ data, xKey, yKey, xScale, yScale }) {
+function PlotPoints({ data, xScale, yScale, width, height }) {
   return;
 }
 

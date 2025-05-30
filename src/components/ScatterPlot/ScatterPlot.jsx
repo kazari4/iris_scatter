@@ -4,7 +4,7 @@ import PlotPoints from "./PlotPoints";
 
 function ScatterPlot({ data }) {
   const width = 800;
-  const height = 800;
+  const height = 600;
 
   const range = [0, 500]
 
@@ -15,7 +15,7 @@ function ScatterPlot({ data }) {
 
   return (
     <svg width={width} height={height}>
-      <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} width={width} height={height} />
+      <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} />
     </svg>
   )
 }

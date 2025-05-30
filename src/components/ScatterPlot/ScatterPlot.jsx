@@ -3,6 +3,7 @@ import { getColor } from "./getColor";
 import PlotPoints from "./PlotPoints";
 
 function ScatterPlot({ data }) {
+  console.log(data)
   const width = 700;
   const height = 600;
 
@@ -11,7 +12,8 @@ function ScatterPlot({ data }) {
   const xScale = createScale(data, "x", range)
   const yScale = createScale(data, "y", range)
 
-  const color = getColor(data = { data })
+  const color = getColor(data)
+  console.log(data)
 
   return (
     <svg width={width} height={height}>

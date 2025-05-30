@@ -3,7 +3,6 @@ import { getColor } from "./getColor";
 import PlotPoints from "./PlotPoints";
 
 function ScatterPlot({ data }) {
-  console.log(data)
   const width = 700;
   const height = 600;
 

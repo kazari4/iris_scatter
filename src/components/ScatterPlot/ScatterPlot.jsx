@@ -19,6 +19,12 @@ function ScatterPlot({ data, species }) {
 
   const color = getColor(data, species)
 
+  const initialVisibleSpecies = species.map((species) => ({
+    [species]: true
+  }))
+
+  const [visibleSpecies, setVisibleSpecies] = useState(initialVisibleSpecies)
+
   return (
     <svg width={width} height={height}>
       <g transform="translate(50,50)">

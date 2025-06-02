@@ -19,9 +19,8 @@ function ScatterPlot({ data, species }) {
 
   const color = getColor(data, species)
 
-  const initialVisibleSpecies = species.map((species) => ({
-    [species]: true
-  }))
+  const initialVisibleSpecies = {}
+  species.forEach((species) => initialVisibleSpecies[species] = true)
 
   const [visibleSpecies, setVisibleSpecies] = useState(initialVisibleSpecies)
 
@@ -31,7 +30,7 @@ function ScatterPlot({ data, species }) {
         <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} />
         <PlotXAxis scale={xScale} rangeMax={rangeMax} />
         <PlotYAxis scale={yScale} rangeMax={rangeMax} />
-        <PlotLegend />
+        <PlotLegend speciesList={species} color={color} visibleSpecies={visibleSpecies} setVisibleSpecies={setVisibleSpecies} />
       </g>
     </svg>
   )

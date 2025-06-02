@@ -2,6 +2,7 @@ import { createScale } from "./createScale";
 import { getColor } from "./getColor";
 import PlotPoints from "./PlotPoints";
 import PlotXAxis from "./PlotXAxis";
+import PlotYAxis from "./PlotYAxis";
 
 function ScatterPlot({ data }) {
   const width = 600;
@@ -21,6 +22,7 @@ function ScatterPlot({ data }) {
       <g transform="translate(50,50)">
         <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} />
         <PlotXAxis scale={xScale} rangeMax={rangeMax} />
+        <PlotYAxis scale={yScale} rangeMax={rangeMax} />
       </g>
     </svg>
   )

@@ -27,7 +27,7 @@ function ScatterPlot({ data, species }) {
   return (
     <svg width={width} height={height}>
       <g transform="translate(50,50)">
-        <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} />
+        <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} visibleSpecies={visibleSpecies} />
         <PlotXAxis scale={xScale} rangeMax={rangeMax} />
         <PlotYAxis scale={yScale} rangeMax={rangeMax} />
         <PlotLegend speciesList={species} color={color} visibleSpecies={visibleSpecies} setVisibleSpecies={setVisibleSpecies} />

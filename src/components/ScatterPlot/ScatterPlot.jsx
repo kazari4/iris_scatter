@@ -4,7 +4,7 @@ import PlotPoints from "./PlotPoints";
 import PlotXAxis from "./PlotXAxis";
 import PlotYAxis from "./PlotYAxis";
 
-function ScatterPlot({ data }) {
+function ScatterPlot({ data, species }) {
   const width = 600;
   const height = 500;
 
@@ -15,7 +15,7 @@ function ScatterPlot({ data }) {
   const xScale = createScale(data, "x", xRange)
   const yScale = createScale(data, "y", yRange)
 
-  const color = getColor(data)
+  const color = getColor(data, species)
 
   return (
     <svg width={width} height={height}>

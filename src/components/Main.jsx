@@ -10,7 +10,6 @@ function Main() {
   const [irisData, setIrisData] = useState(null);
   const [xAxis, setXAxis] = useState("sepal length");
   const [yAxis, setYAxis] = useState("sepal width");
-  const convertedData = convertData(irisData, xAxis, yAxis);
 
   useEffect(() => {
     fetchIrisDataSet().then((irisData) => {
@@ -23,6 +22,10 @@ function Main() {
       <Loading />
     )
   }
+
+  const convertedData = convertData(irisData, xAxis, yAxis);
+  const speciesList = Array.from(new Set(irisData.map(({ species }) => species)));
+
   return (
     <section className="section">
       <DropdownSelector
@@ -33,6 +36,7 @@ function Main() {
       />
       <ScatterPlot
         data={convertedData}
+        species={speciesList}
       />
     </section>
   );

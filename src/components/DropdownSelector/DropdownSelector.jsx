@@ -3,7 +3,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
     <div className="columns">
       <div className="column">
         <div className="field">
-          <label className="label">X Axis</label>
+          <label className="label">x property</label>
           <div className="control">
             <div className="select">
               <select defaultValue={xAxis} onChange={(e) => setXAxis(e.target.value)}>
@@ -19,7 +19,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
 
       <div className="column">
         <div className="field">
-          <label className="label">Y Axis</label>
+          <label className="label">y property</label>
           <div className="control">
             <div className="select">
               <select defaultValue={yAxis} onChange={(e) => setYAxis(e.target.value)}>

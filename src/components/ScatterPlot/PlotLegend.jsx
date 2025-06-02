@@ -7,7 +7,7 @@ function switchVisibleSpecies(setVisibleSpecies, speciesName) {
 
 
 function PlotLegend({ speciesList, color, visibleSpecies, setVisibleSpecies }) {
-  const boxSize = 10
+  const boxSize = 15
   return (
     <g transform="translate(400,50)">
       {speciesList.map((species, i) => {
@@ -22,7 +22,7 @@ function PlotLegend({ speciesList, color, visibleSpecies, setVisibleSpecies }) {
             className="legends"
           >
             <rect x="0" y="0" width={boxSize} height={boxSize} fill={color[species]} />
-            <text x="15" y={boxSize} >{species}</text>
+            <text x={boxSize + 5} y={boxSize} dominantBaseline="alphabetic">{species}</text>
           </g>
         )
       })}

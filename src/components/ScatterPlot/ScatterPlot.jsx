@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { createScale } from "./createScale";
 import { getColor } from "./getColor";
 import PlotPoints from "./PlotPoints";
 import PlotXAxis from "./PlotXAxis";
 import PlotYAxis from "./PlotYAxis";
+import PlotLegend from "./PlotLegend";
 
 function ScatterPlot({ data, species }) {
   const width = 600;
@@ -23,6 +25,7 @@ function ScatterPlot({ data, species }) {
         <PlotPoints data={data} xScale={xScale} yScale={yScale} color={color} />
         <PlotXAxis scale={xScale} rangeMax={rangeMax} />
         <PlotYAxis scale={yScale} rangeMax={rangeMax} />
+        <PlotLegend />
       </g>
     </svg>
   )

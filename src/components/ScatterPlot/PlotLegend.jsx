@@ -12,7 +12,14 @@ function PlotLegend({ speciesList, color, visibleSpecies, setVisibleSpecies }) {
     <g transform="translate(400,50)">
       {speciesList.map((species, i) => {
         return (
-          <g key={i} transform={`translate(20,${30 * i})`} onClick={() => switchVisibleSpecies(setVisibleSpecies, species)}>
+          <g key={i}
+            style={{
+              cursor: 'pointer',
+              opacity: visibleSpecies[species] ? 1 : 0.5
+            }}
+            transform={`translate(20,${30 * i})`}
+            onClick={() => switchVisibleSpecies(setVisibleSpecies, species)}
+          >
             <rect x="0" y="0" width={boxSize} height={boxSize} fill={color[species]} />
             <text x="15" y={boxSize} >{species}</text>
           </g>

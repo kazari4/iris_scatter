@@ -17,7 +17,7 @@ function ScatterPlot({ data, species }) {
   const xScale = createScale(data, "x", xRange)
   const yScale = createScale(data, "y", yRange)
 
-  const color = getColor(data, species)
+  const color = getColor(species)
 
   const initialVisibleSpecies = {}
   species.forEach((species) => initialVisibleSpecies[species] = true)

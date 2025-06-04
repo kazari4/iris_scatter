@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { createScale } from "./createScale";
-import { getColor } from "./getColor";
 import PlotPoints from "./PlotPoints";
 import PlotXAxis from "./PlotXAxis";
 import PlotYAxis from "./PlotYAxis";
 import PlotLegend from "./PlotLegend";
 
-function ScatterPlot({ data, species }) {
+function ScatterPlot({ data, species, color }) {
   const width = 600;
   const height = 500;
 
@@ -16,8 +15,6 @@ function ScatterPlot({ data, species }) {
 
   const xScale = createScale(data, "x", xRange)
   const yScale = createScale(data, "y", yRange)
-
-  const color = getColor(species)
 
   const initialVisibleSpecies = {}
   species.forEach((species) => initialVisibleSpecies[species] = true)

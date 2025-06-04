@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchIrisDataSet } from "../api";
 import { convertData } from "./convertData";
+import { getColor } from "./getColor";
 import DropdownSelector from "./DropdownSelector/DropdownSelector";
 import ScatterPlot from "./ScatterPlot/ScatterPlot";
 import Loading from "./Loading/Loading";
@@ -25,6 +26,7 @@ function Main() {
 
   const convertedData = convertData(irisData, xAxis, yAxis);
   const speciesList = Array.from(new Set(irisData.map(({ species }) => species)));
+  const color = getColor(speciesList)
 
   return (
     <section className="section">
@@ -37,6 +39,7 @@ function Main() {
       <ScatterPlot
         data={convertedData}
         species={speciesList}
+        color={color}
       />
     </section>
   );

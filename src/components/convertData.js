@@ -14,6 +14,7 @@ export function convertData(data, xProperty, yProperty) {
   return data.map((d) => ({
     x: d[xKey],
     y: d[yKey],
+    id: d.id,
     species: d.species,
   }));
 }

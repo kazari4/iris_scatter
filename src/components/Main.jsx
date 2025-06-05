@@ -9,8 +9,8 @@ import Loading from "./Loading/Loading";
 
 function Main() {
   const [irisData, setIrisData] = useState(null);
-  const [xAxis, setXAxis] = useState("sepal length");
-  const [yAxis, setYAxis] = useState("sepal width");
+  const [xProperty, setXProperty] = useState("sepal length");
+  const [yProperty, setYProperty] = useState("sepal width");
 
   useEffect(() => {
     fetchIrisData().then((irisData) => {
@@ -24,17 +24,17 @@ function Main() {
     )
   }
 
-  const convertedData = convertData(irisData, xAxis, yAxis);
+  const convertedData = convertData(irisData, xProperty, yProperty);
   const speciesList = Array.from(new Set(irisData.map(({ species }) => species)));
   const color = getColor(speciesList)
 
   return (
     <section className="section">
       <DropdownSelector
-        xAxis={xAxis}
-        yAxis={yAxis}
-        setXAxis={setXAxis}
-        setYAxis={setYAxis}
+        xProperty={xProperty}
+        yProperty={yProperty}
+        setXAxis={setXProperty}
+        setYAxis={setYProperty}
       />
       <ScatterPlot
         data={convertedData}

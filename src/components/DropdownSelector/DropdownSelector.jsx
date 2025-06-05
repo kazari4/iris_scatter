@@ -1,4 +1,4 @@
-function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
+function DropdownSelector({ xProperty, yProperty, setXProperty, setYProperty }) {
   return (
     <div className="columns">
       <div className="column">
@@ -6,7 +6,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
           <label className="label">x property</label>
           <div className="control">
             <div className="select">
-              <select defaultValue={xAxis} onChange={(e) => setXAxis(e.target.value)}>
+              <select defaultValue={xProperty} onChange={(e) => setXProperty(e.target.value)}>
                 <option>sepal length</option>
                 <option>sepal width</option>
                 <option>petal length</option>
@@ -22,7 +22,7 @@ function DropdownSelector({ xAxis, yAxis, setXAxis, setYAxis }) {
           <label className="label">y property</label>
           <div className="control">
             <div className="select">
-              <select defaultValue={yAxis} onChange={(e) => setYAxis(e.target.value)}>
+              <select defaultValue={yProperty} onChange={(e) => setYProperty(e.target.value)}>
                 <option>sepal length</option>
                 <option>sepal width</option>
                 <option>petal length</option>

@@ -1,4 +1,4 @@
-export function convertData(data, xLabel, yLabel) {
+export function convertData(data, xProperty, yProperty) {
   if (!data) return;
 
   const axisKeyConvert = {
@@ -8,8 +8,8 @@ export function convertData(data, xLabel, yLabel) {
     "petal width": "petalWidth",
   };
 
-  const xKey = axisKeyConvert[xLabel];
-  const yKey = axisKeyConvert[yLabel];
+  const xKey = axisKeyConvert[xProperty];
+  const yKey = axisKeyConvert[yProperty];
 
   return data.map((d) => ({
     x: d[xKey],

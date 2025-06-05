@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchIrisDataSet } from "../api";
+import { fetchIrisData } from "../api";
 import { convertData } from "./convertData";
 import { getColor } from "./getColor";
 import DropdownSelector from "./DropdownSelector/DropdownSelector";
@@ -13,7 +13,7 @@ function Main() {
   const [yAxis, setYAxis] = useState("sepal width");
 
   useEffect(() => {
-    fetchIrisDataSet().then((irisData) => {
+    fetchIrisData().then((irisData) => {
       setIrisData(irisData);
     });
   }, []);

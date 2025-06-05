@@ -10,7 +10,7 @@ function PlotYAxis({ scale, rangeMax }) {
         return (
           <g key={i}>
             <line x1={tickX} y1={tickY} x2={tickX - tickHeight} y2={tickY} stroke="black" />
-            <text x={tickX - tickHeight} y={tickY} textAnchor="end">{tick}</text>
+            <text x={tickX - tickHeight} y={tickY} textAnchor="end" dominantBaseline="middle">{tick}</text>
           </g>
         )
       })}

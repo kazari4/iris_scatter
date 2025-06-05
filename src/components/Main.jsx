@@ -33,8 +33,8 @@ function Main() {
       <DropdownSelector
         xProperty={xProperty}
         yProperty={yProperty}
-        setXAxis={setXProperty}
-        setYAxis={setYProperty}
+        setXProperty={setXProperty}
+        setYProperty={setYProperty}
       />
       <ScatterPlot
         data={convertedData}
